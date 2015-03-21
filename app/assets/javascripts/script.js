@@ -21,6 +21,7 @@
             type: 'GET',     
         })
         .done(function(data) {
+            console.log(data);
 
             var estimatedTime = 0;
 
