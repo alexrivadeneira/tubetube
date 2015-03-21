@@ -60,7 +60,8 @@ console.log(estimatedTime);
 
             for (var i = 0; i < resultItems.length; i++){
                 console.log(resultItems[i].id.videoId);
-                videoLinks += "<li><a href='https://www.youtube.com/watch?v=" + resultItems[i].id.videoId + "' target='new'>"+ resultItems[i].snippet.title + "</a></li>"
+                videoLinks += "<li><a href='https://www.youtube.com/watch?v=" + resultItems[i].id.videoId + "' target='new'>"+ resultItems[i].snippet.title + "</a></li>";
+                videoLinks += "<img src='" + resultItems[i].snippet.thumbnails.medium['url'] + "'></img>";
             }    
             
             videoLinks += "</ul>";
