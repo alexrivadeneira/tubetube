@@ -1,5 +1,6 @@
+$(document).ready(function(){
 
-    // populate the dropdown
+  // populate the dropdown
     $.getJSON('stations.json', function(data) {       
         var stations = data["Stations"];
         stationsDropDown = "";
@@ -12,7 +13,8 @@
  
 
     // When you click submit
-    $("#submitStations").click(function(){
+    $("#submitStations").click(function(event){
+        event.preventDefault();
         var start = $("#startStationsDropDown").val();
         var end = $("#endStationsDropDown").val();
 
@@ -85,6 +87,7 @@ console.log(estimatedTime);
         // different conditions based on different times prompt different queries from YouTube
         
 
+});
 });
 
 // id https://www.youtube.com/watch?v=ISBOwJYDTbI
