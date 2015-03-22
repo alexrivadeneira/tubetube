@@ -11,8 +11,19 @@
 <h1>TubeTube</h1>
 <h2>Watch a perfectly timed YouTube video for your trip on the DC Metro!</h2>
 
+<h3> Alex testing</h3>
+
+<%= form_tag(:action => "submitshow") do %>
+
+	<%= select_tag(:metro_station, options_for_select([['Sunday', '0'], ['Monday', '1']], params[:metro_station] )) %>
+	<%= submit_tag("submit DROPDOWN") %>
+<% end %> 
+
+<br><br>
+
 <label for="startStationsDropDown"> Choose your Starting Station:</label>
 <select name="startStationsDropDown" id="startStationsDropDown">
+
 
 </select>
 

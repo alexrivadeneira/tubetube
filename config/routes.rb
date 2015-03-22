@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get "show" => "static_pages#show"
   get "test" => "static_pages#test"
   post "submitform" => "static_pages#submitform"
+  post "submitshow" => "static_pages#submitshow"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
