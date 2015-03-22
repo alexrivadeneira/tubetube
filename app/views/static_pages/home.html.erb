@@ -7,45 +7,20 @@
 </head>
 <body>
 
-
 <h1>TubeTube</h1>
 <h2>Watch a perfectly timed YouTube video for your trip on the DC Metro!</h2>
 
-<h3> Alex testing</h3>
-
-<%= form_tag(:action => "submitshow") do %>
-
+<%= form_tag(:action => "submit") do %>
+	
+	<%= label_tag "Starting Station:" %>
 	<%= select_tag(:metro_station_a, options_for_select([['Dupont Circle','A03'],['Farragut North','A02'],['Metro Center','A01'],['Stadium Armory','D08'],['Tenleytown','A07'],['Van Ness UDC','A06'],['Cleveland Park','A05'],['Woodley Park Zoo','A04'],['National Arpt','C10'],['Greenbelt','E10'],['Braddock Road','C12'],['Silver Spring','B08'],['Forest Glen','B09'],['Minnesota Avenue','D09'],['Eastern Market','D06'],['Potomac Avenue','D07'],['Federal Center SW','D04'],['Capitol South','D05'],['Smithsonian','D02'],['LEnfant Plaza','D03'],['Gallery Place','B01'],['Judiciary Square','B02'],['Union Station','B03'],['Rhode Island Avenue','B04'],['Brookland','B05'],['Fort Totten','B06'],['Takoma','B07'],['Landover','D12'],['King Street','C13'],['Clarendon','K02'],['Deanwood','D10'],['College Park','E09'],['Huntington','C15'],['Ballston','K04'],['Largo Town Center','G05'],['Morgan Blvd','G04'],['Court House','K01'],['Benning Road','G01'],['Branch Avenue','F11'],['Addison Road','G03'],['Capitol Heights','G02'],['Dunn Loring','K07'],['W Falls Church','K06'],['Cheverly','D11'],['Vienna','K08'],['Twinbrook','A13'],['White Flint','A12'],['Grosvenor','A11'],['Medical Center','A10'],['Shady Grove','A15'],['Rockville','A14'],['Spring Hill','N04'],['Wiehle-Reston East','N06'],['McLean','N01'],['Tysons Corner','N02'],['Greensboro','N03'],['New York Avenue','B35'],['Shaw','E02'],['Crystal City','C09'],['Pentagon City','C08'],['Prince Georges Plaza','E08'],['West Hyattsville','E07'],['Fort Totten','E06'],['Georgia Avenue','E05'],['Columbia Heights','E04'],['U Street','E03'],['Metro Center','C01'],['Mt Vernon Sq','E01'],['Farragut West','C03'],['McPherson Square','C02'],['Rosslyn','C05'],['Federal Triangle','D01'],['Pentagon','C07'],['Arlington Cemetery','C06'],['Foggy Bottom','C04'],['Virginia Square','K03'],['Franconia-Springfield','J03'],['New Carrollton','D13'],['Glenmont','B11'],['E Falls Church','K05'],['Southern Ave','F08'],['Naylor Road','F09'],['Eisenhower Avenue','C14'],['Waterfront','F04'],['Navy Yard','F05'],['Anacostia','F06'],['Congress Height','F07'],['Van Dorn St','J02'],['Gallery Place','F01'],['Archives','F02'],['LEnfant Plaza','F03'],['Wheaton','B10'],['Suitland','F10'],['Bethesda','A09'],['Friendship Heights','A08']] )) %>
 
+	<%= label_tag "Destination Station:" %>
 	<%= select_tag(:metro_station_b, options_for_select([['Dupont Circle','A03'],['Farragut North','A02'],['Metro Center','A01'],['Stadium Armory','D08'],['Tenleytown','A07'],['Van Ness UDC','A06'],['Cleveland Park','A05'],['Woodley Park Zoo','A04'],['National Arpt','C10'],['Greenbelt','E10'],['Braddock Road','C12'],['Silver Spring','B08'],['Forest Glen','B09'],['Minnesota Avenue','D09'],['Eastern Market','D06'],['Potomac Avenue','D07'],['Federal Center SW','D04'],['Capitol South','D05'],['Smithsonian','D02'],['LEnfant Plaza','D03'],['Gallery Place','B01'],['Judiciary Square','B02'],['Union Station','B03'],['Rhode Island Avenue','B04'],['Brookland','B05'],['Fort Totten','B06'],['Takoma','B07'],['Landover','D12'],['King Street','C13'],['Clarendon','K02'],['Deanwood','D10'],['College Park','E09'],['Huntington','C15'],['Ballston','K04'],['Largo Town Center','G05'],['Morgan Blvd','G04'],['Court House','K01'],['Benning Road','G01'],['Branch Avenue','F11'],['Addison Road','G03'],['Capitol Heights','G02'],['Dunn Loring','K07'],['W Falls Church','K06'],['Cheverly','D11'],['Vienna','K08'],['Twinbrook','A13'],['White Flint','A12'],['Grosvenor','A11'],['Medical Center','A10'],['Shady Grove','A15'],['Rockville','A14'],['Spring Hill','N04'],['Wiehle-Reston East','N06'],['McLean','N01'],['Tysons Corner','N02'],['Greensboro','N03'],['New York Avenue','B35'],['Shaw','E02'],['Crystal City','C09'],['Pentagon City','C08'],['Prince Georges Plaza','E08'],['West Hyattsville','E07'],['Fort Totten','E06'],['Georgia Avenue','E05'],['Columbia Heights','E04'],['U Street','E03'],['Metro Center','C01'],['Mt Vernon Sq','E01'],['Farragut West','C03'],['McPherson Square','C02'],['Rosslyn','C05'],['Federal Triangle','D01'],['Pentagon','C07'],['Arlington Cemetery','C06'],['Foggy Bottom','C04'],['Virginia Square','K03'],['Franconia-Springfield','J03'],['New Carrollton','D13'],['Glenmont','B11'],['E Falls Church','K05'],['Southern Ave','F08'],['Naylor Road','F09'],['Eisenhower Avenue','C14'],['Waterfront','F04'],['Navy Yard','F05'],['Anacostia','F06'],['Congress Height','F07'],['Van Dorn St','J02'],['Gallery Place','F01'],['Archives','F02'],['LEnfant Plaza','F03'],['Wheaton','B10'],['Suitland','F10'],['Bethesda','A09'],['Friendship Heights','A08']] )) %>
 
-	<%= submit_tag("submit DROPDOWN") %>
+	<%= submit_tag("Go!") %>
 <% end %> 
 
-<br><br>
-
-<label for="startStationsDropDown"> Choose your Starting Station:</label>
-<select name="startStationsDropDown" id="startStationsDropDown">
-
-
-</select>
-
-<br />
-
-<label for="endStationsDropDown"> Choose your End Station:</label>
-<select name="endStationsDropDown" id="endStationsDropDown">
-
-</select>
-
-<br />
-
-<button id="submitStations">Submit</button>
-
-<div id="estimate">
-</div>
-
-<div id="recommendedVideos">
-</div>
 
 </body>
 </html>
