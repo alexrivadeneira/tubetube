@@ -4,20 +4,21 @@ Your travel time will be <%= @wmata_data["StationToStationInfos"][0]["RailTime"]
 
 
 
-<% video_link = "https://www.youtube.com/watch?v=" %>
-
+<% video_link_prefix = "https://www.youtube.com/watch?v=" %>
 
 <% items = @youtube_data["items"] %>
 
 
-
 <% items.each do |item| %>	
-<%= item["id"]["videoId"] %> <br><br>
-<%= item["snippet"]["thumbnails"]["medium"]["url"] %> <br><br>
-<%= item["snippet"]["title"] %> Testing 123 <br><br>
-<% end %>
+	<% id = item["id"]["videoId"] %> 
+	<% image_url = item["snippet"]["thumbnails"]["medium"]["url"] %>
 
-<!--
-               videoLinks += "<li><a href='https://www.youtube.com/watch?v=" + resultItems[i].id.videoId + "' target='new'>"+ resultItems[i].snippet.title + "</a></li>";
-                videoLinks += "<a href='https://www.youtube.com/watch?v=" + resultItems[i].id.videoId + "' target='new'>" + "<img src='" + resultItems[i].snippet.thumbnails.medium['url'] + "'></img>" + "</a>";
-   
+	<% video_link = video_link_prefix + id %>
+
+	<h2><%= item["snippet"]["title"] %></h2>
+
+	<%= link_to image_tag(image_url), video_link %>
+
+
+<br><br>
+<% end %>
