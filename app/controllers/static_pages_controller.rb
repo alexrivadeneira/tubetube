@@ -77,7 +77,8 @@ class StaticPagesController < ApplicationController
 
 
 	def submitshow
-		@stationCode = params[:metro_station]
+		@metro_station_a = params["metro_station_a"]
+		@metro_station_b = params["metro_station_b"]
 	end
 
 end
