@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
-  get "search" => "static_pages#show"
+  get "show" => "static_pages#show"
   get "test" => "static_pages#test"
+  post "submitform" => "static_pages#submitform"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

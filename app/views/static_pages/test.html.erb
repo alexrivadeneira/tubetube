@@ -14,7 +14,13 @@
 
 <%= @wmata_data["StationToStationInfos"][0]["RailTime"]%>
 
-<%= @youtube_data %>
+<%= @youtube_data["items"][0]["snippet"]["title"] %>	
+
+<%= form_tag(:action => "submitform") do %>
+<%= text_field_tag("stopcodeA", params[:stopa]) %>
+<%= text_field_tag("stopcodeB", params[:stopb]) %>
+<%= submit_tag("submit length") %>
+<% end %>
 
 <h1>TESTING WITH HTTPARTY</h1>
 <h2>Watch a perfectly timed YouTube video for your trip on the DC Metro!</h2>
