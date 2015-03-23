@@ -1,13 +1,13 @@
 	<% if @no_time %>
-		You need to enter two different stations!
+		<h3>You need to enter two different stations!</h3>
 
-		<%= link_to("Go back to Search", "home") %>
+		<h4><%= link_to("Go back to Search", "home") %></h4>
 
 	<% else %>
 
-		Your travel time will be <%= @wmata_data["StationToStationInfos"][0]["RailTime"]%>
-
-		<br><br>
+		<h3>Your travel time will be <%= @wmata_data["StationToStationInfos"][0]["RailTime"]%> minutes.</h3>
+		<h4>You could watch...</h4>
+		<h4><%= link_to("Or Search Again", "home") %></h4>
 
 		<% video_link_prefix = "https://www.youtube.com/watch?v=" %>
 
