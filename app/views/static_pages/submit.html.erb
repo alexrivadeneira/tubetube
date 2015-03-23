@@ -1,24 +1,31 @@
-Your travel time will be <%= @wmata_data["StationToStationInfos"][0]["RailTime"]%>
+	<% if @no_time %>
+		You need to enter two different stations!
 
-<br><br>
+		<%= link_to("Go back to Search", "home") %>
 
+	<% else %>
 
+		Your travel time will be <%= @wmata_data["StationToStationInfos"][0]["RailTime"]%>
 
-<% video_link_prefix = "https://www.youtube.com/watch?v=" %>
+		<br><br>
 
-<% items = @youtube_data["items"] %>
+		<% video_link_prefix = "https://www.youtube.com/watch?v=" %>
 
-
-<% items.each do |item| %>	
-	<% id = item["id"]["videoId"] %> 
-	<% image_url = item["snippet"]["thumbnails"]["medium"]["url"] %>
-
-	<% video_link = video_link_prefix + id %>
-
-	<h2><%= item["snippet"]["title"] %></h2>
-
-	<%= link_to image_tag(image_url), video_link %>
+		<% items = @youtube_data["items"] %>
 
 
-<br><br>
-<% end %>
+		<% items.each do |item| %>	
+			<% id = item["id"]["videoId"] %> 
+			<% image_url = item["snippet"]["thumbnails"]["medium"]["url"] %>
+
+			<% video_link = video_link_prefix + id %>
+
+			<h2><%= item["snippet"]["title"] %></h2>
+
+			<%= link_to image_tag(image_url), video_link %>
+
+
+		<br><br>
+		<% end %>
+
+	<% end %>
