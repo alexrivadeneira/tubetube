@@ -2,12 +2,13 @@ class StaticPagesController < ApplicationController
 	# devise callback for user authentication
 	def home
 	end
-	
-  require 'openssl'
-   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+
 
 
 	def submit
+
+   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+
 		stopcodeA = params["metro_station_a"]
 		stopcodeB = params["metro_station_b"]
 
