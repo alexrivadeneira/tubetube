@@ -3,6 +3,9 @@ class StaticPagesController < ApplicationController
 	def home
 	end
 
+OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+
+
 	def submit
 		stopcodeA = params["metro_station_a"]
 		stopcodeB = params["metro_station_b"]
@@ -33,6 +36,7 @@ class StaticPagesController < ApplicationController
 
 			youtube_request_url += "&key="
 
+			puts @wmata_data["StationToStationInfos"][0]["RailTime"]
 			youtube_api_key = ENV["youtube_api_key"]
 			youtube_request_url += youtube_api_key
 			puts(youtube_request_url)
