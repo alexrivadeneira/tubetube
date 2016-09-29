@@ -7,7 +7,6 @@ class StaticPagesController < ApplicationController
 
 	def submit
 
-   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
 		stopcodeA = params["metro_station_a"]
 		stopcodeB = params["metro_station_b"]
