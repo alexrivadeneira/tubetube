@@ -3,7 +3,6 @@ class StaticPagesController < ApplicationController
 	def home
 	end
 
-OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
 
 	def submit
